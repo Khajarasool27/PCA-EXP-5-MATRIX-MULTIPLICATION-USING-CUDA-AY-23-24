@@ -1,9 +1,8 @@
 # PCA-EXP-5-MATRIX-MULTIPLICATION-USING-CUDA-AY-23-24
-<h3>AIM:</h3>
-<h3>BHUVANESH S</h3>
-<h3>212225040048</h3>
-<h3>EX. NO:5</h3>
-<h3>DATE:24/11/26</h3>
+<h3>AIM:MATRIX-MULTIPLICATION-USING-CUDA-AY-23-24</h3>
+<h3>NAME: B.Khaja Rasool </h3>
+<h3>REG NO:212224230040</h3>
+<h3>EXP NO:05</h3>
 <h1> <align=center> MATRIX MULTIPLICATION USING CUDA </h3>
   Implement Matrix Multiplication using GPU.</h3>
 
@@ -27,11 +26,6 @@ Google Colab with NVCC Compiler
 12.	Print Result: Print the result matrix and the elapsed time.
 13.	Free Device Memory: Finally, free the device memory that was allocated for the matrices.
 ## PROGRAM:
-
-```
-!pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
-%load_ext nvcc4jupyter
-```
 ```
 %%writefile matmul.cu
 #include <stdio.h>
@@ -196,15 +190,12 @@ int main()
     return 0;
 }
 ```
-```
-!nvcc -arch=sm_75 matmul.cu -o matmul
-!nvprof ./matmul
-!nvprof --print-gpu-trace ./matmul
-```
 
 ## OUTPUT:
-<img width="1700" height="509" alt="Screenshot 2026-09-01 081920" src="https://github.com/user-attachments/assets/a10c1e27-6714-4417-ad1d-de3fd5c63c25" />
-<img width="1759" height="357" alt="Screenshot 2026-09-01 081935" src="https://github.com/user-attachments/assets/81d29beb-4689-48ba-b0a6-c1e5f86cf359" />
+<img width="1422" height="710" alt="image" src="https://github.com/user-attachments/assets/c28a7862-49c3-49e4-8a56-9f4d7a7ff1b8" />
+<img width="1501" height="787" alt="image" src="https://github.com/user-attachments/assets/a31b8ec2-cfd4-47c3-a2b5-6064a0940b4e" />
+
+
 
 ## RESULT:
-Thus the program has been executed by using CUDA to mulptiply two matrices. It is observed that there are variations in host and device elapsed time. Device took0.000180 time.
+Thus the program has been executed by using CUDA to multiply two matrices. It is observed that there are variations in host and device elapsed time. Device took 3,136 ns (0.000003136 s) for the kernel (7,040 ns including host-to-device and device-to-host memory transfers) time and host took 0.000199 s (199 µs) measured Elapsed Time time.
